@@ -36,29 +36,21 @@ Download
 Installation
 </a></h3>
 <p>
-  Installing Fabric server
   <ol>
-  <li>Unpack fabric_server.zip into your desired destination</li>
-  <li>Run "start fabric" from a command line</li>
+  <li>Unpack k2view_fabric.zip into C:\k2view_fabric</li>
+  <li>Add JAVA_HOME = C:\k2view_fabric\apps\java to the windows environment variables</li>
+  <li>Run "C:\k2view_fabric\start_server.lnk" to start Fabric</li>
+  <li>Run "C:\k2view_fabric\stop_server.lnk" to stop Fabric</li>
+  <li>Run "C:\k2view_fabric\Studio.lnk" to run Fabric Database studio</li>
   </ol>
   </p>
-
-
-<p>
-  Installing Fabric studio
-  <ol>
-  <li>Unpack fabric_studio.zip into your desired destination</li>
-  <li>Run fabric.exe</li>
-  </ol>
-  </p>
-
 
 <h2>
 <a id="windows" class="anchor" href="#connect" aria-hidden="true"><span class="octicon octicon-link"></span>
 Connect your databases to fabric
 </a></h3>
 <p>
-  Run fabric studio
+  Run Fabric Database Studio
   <ol>
   <li>File -> New project</li>
   <li>Click New DB Connection from the menu</li>
@@ -89,7 +81,8 @@ Start querying the API
 <p>
   Open a web browser that has access to the machine that runs the fabric server
   <ol>
-  <li>Go to http://10.10.10.10:3213/q?table=TABLE_NAME&id=123&token=qazwsx</li>
+  <li>Go to:<br>http://localhost:3213/query?lu=MICRO_DATABASE.ID&sql=SELECT%20*%20FROM%20table_name</li>
+  e.g.<br>http://localhost:3213/query?lu=CUSTOMER.23&sql=SELECT%20*%20FROM%20PURCHASES
   <li>You will get a JSON result of your table entry</li>
   </ol>
   </p>
